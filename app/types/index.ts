@@ -1,3 +1,5 @@
+export type SearchableData = Record<string, unknown>;
+
 export type Writer = {
   id: number;
   first_name: string;

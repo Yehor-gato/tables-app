@@ -1,4 +1,3 @@
-"use client";
 import { FC } from "react";
 import { Table } from "rsuite-table";
 import { TableWriter } from "@/app/types";
