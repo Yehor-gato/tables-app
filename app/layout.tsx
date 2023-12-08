@@ -6,8 +6,7 @@ import "rsuite-table/dist/css/rsuite-table.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Table app",
-  description: "Table app test assessment",
+  title: "tables app",
 };
 
 export default function RootLayout({
