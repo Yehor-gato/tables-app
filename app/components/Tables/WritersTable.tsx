@@ -37,7 +37,7 @@ const WritersTable: FC<Props> = ({ tableWriters, onNumberOfBooksClick }) => {
               {(row) => (
                 <div
                   onClick={() => onNumberOfBooksClick(row.id)}
-                  className="w-full h-wull underline hover:opacity-50 cursor-pointer"
+                  className="h-wull w-full cursor-pointer underline hover:opacity-50"
                 >
                   {row.numberOfBooks}
                 </div>

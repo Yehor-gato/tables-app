@@ -39,7 +39,7 @@ const Tables: FC<Props> = ({ writers, books }) => {
   };
 
   return (
-    <div className="flex w-full gap-4 items-start">
+    <div className="flex w-full items-start gap-4">
       <TableWrapper>
         <ControlsWrapper>
           <Input
