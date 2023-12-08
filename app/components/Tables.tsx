@@ -2,12 +2,12 @@
 import { FC, PropsWithChildren, useMemo, useState } from "react";
 import { Nationality, TableBook, TableWriter } from "@/app/types";
 
-import WritersTable from "./WritersTable";
-import BooksTable from "./BooksTable";
 import Input from "@/app/components/Input";
 import useTableBooks from "@/app/hooks/useTableBooks";
 import NationalitySelect from "@/app/components/NationalitySelect";
 import useTableWriters from "@/app/hooks/useTableWriters";
+import WritersTable from "@/app/components/WritersTable";
+import BooksTable from "@/app/components/BooksTable";
 
 type Props = { writers: TableWriter[]; books: TableBook[] };
 
