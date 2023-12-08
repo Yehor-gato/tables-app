@@ -14,6 +14,7 @@ const BooksTable: FC<Props> = ({ tableBooks }) => {
       cellBordered
       bordered
       virtualized
+      hover={false}
     >
       {({ Column, HeaderCell, Cell }) => (
         <>
@@ -27,7 +28,7 @@ const BooksTable: FC<Props> = ({ tableBooks }) => {
           </Column>
           <Column flexGrow={2}>
             <HeaderCell>Author</HeaderCell>
-            <Cell>{(row) => row.authorName}</Cell>
+            <Cell>{(row) => row.writerName}</Cell>
           </Column>
           <Column flexGrow={1}>
             <HeaderCell>Year of Publication</HeaderCell>

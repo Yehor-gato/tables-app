@@ -1,6 +1,4 @@
-import { SearchableData } from "@/app/types";
-
-function searchInArray<T extends SearchableData>(
+function searchInArray<T extends Record<string, unknown>>(
   array: T[],
   search: string,
 ): T[] {

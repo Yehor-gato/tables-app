@@ -1,6 +1,7 @@
-import { Book, TableBook, TableWriter, Writer } from "@/app/types";
+import { Book, Nationality, TableBook, TableWriter, Writer } from "@/app/types";
 
 const AUTHOR_NAME_FALLBACK = "Unknown";
+const AUTHOR_NATIONALITY_FALLBACK = Nationality.American;
 
 function buildTableData(
   writers: Writer[],
@@ -15,18 +16,21 @@ function buildTableData(
   }
 
   const tableBooks: TableBook[] = books.map((book) => {
-    let authorName = AUTHOR_NAME_FALLBACK;
+    let writerName = AUTHOR_NAME_FALLBACK;
+    let writerNationality = AUTHOR_NATIONALITY_FALLBACK;
     if (book.author_id in writersMap) {
       const writer = writersMap[book.author_id];
-      authorName = `${writer.first_name} ${writer.last_name}`;
+      writerName = `${writer.first_name} ${writer.last_name}`;
+      writerNationality = writer.nationality;
       bookCountByAuthor[book.author_id]++;
     }
 
     return {
       id: book.id,
       title: book.title,
-      authorId: book.author_id,
-      authorName,
+      writerId: book.author_id,
+      writerName,
+      writerNationality,
       year: book.year,
     };
   });

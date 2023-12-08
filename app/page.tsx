@@ -9,7 +9,7 @@ export default async function Home() {
 
   return (
     <main className="flex min-h-screen p-12">
-      <Tables tableWriters={tableWriters} tableBooks={tableBooks} />
+      <Tables writers={tableWriters} books={tableBooks} />
     </main>
   );
 }

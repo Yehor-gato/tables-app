@@ -4,9 +4,10 @@ import { TableWriter } from "@/app/types";
 
 type Props = {
   tableWriters: TableWriter[];
+  onNumberOfBooksClick: (writerId: number) => void;
 };
 
-const WritersTable: FC<Props> = ({ tableWriters }) => {
+const WritersTable: FC<Props> = ({ tableWriters, onNumberOfBooksClick }) => {
   return (
     <Table<TableWriter, string>
       data={tableWriters}
@@ -14,6 +15,7 @@ const WritersTable: FC<Props> = ({ tableWriters }) => {
       cellBordered
       bordered
       virtualized
+      hover={false}
     >
       {({ Column, HeaderCell, Cell }) => (
         <>
@@ -31,7 +33,16 @@ const WritersTable: FC<Props> = ({ tableWriters }) => {
           </Column>
           <Column flexGrow={1}>
             <HeaderCell>Number of Books</HeaderCell>
-            <Cell>{(row) => row.numberOfBooks}</Cell>
+            <Cell>
+              {(row) => (
+                <div
+                  onClick={() => onNumberOfBooksClick(row.id)}
+                  className="w-full h-wull underline hover:opacity-50 cursor-pointer"
+                >
+                  {row.numberOfBooks}
+                </div>
+              )}
+            </Cell>
           </Column>
         </>
       )}
