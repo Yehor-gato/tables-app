@@ -2,9 +2,11 @@
 
 The app showcasing 2 tables: writers and books with search and filters for both tables.
 
-Screencast showcasing app: PLACEHOLDER
+Screencast showcasing app: 
 
-You can find deployed version at: PLACEHOLDER
+https://github.com/Yehor-gato/tables-app/assets/140712098/82a26bf6-7ed2-435f-acd0-210a9bf901ef
+
+The deployed version is available at: https://tables-app-234u.vercel.app/
 
 ## How to run
 
